@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"gitee.com/os4top_admin/cloud-station-g7/store"
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
+	"github.com/galendu/cloud-station-g7/store"
 )
 
 var (

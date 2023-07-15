@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"gitee.com/os4top_admin/cloud-station-g7/store"
-	"gitee.com/os4top_admin/cloud-station-g7/store/aliyun"
+	"github.com/galendu/cloud-station-g7/store"
+	"github.com/galendu/cloud-station-g7/store/aliyun"
 	"github.com/stretchr/testify/assert"
 )
 
