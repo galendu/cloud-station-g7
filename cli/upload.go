@@ -16,8 +16,8 @@ var (
 )
 
 const (
-	default_ak = "LTAI5tFsmLipSyCrrcA8wkUv"
-	default_sk = "fCLTJUZfa2CVVpXbrwmeSLVaC4i5rx"
+	default_ak = "xxx"
+	default_sk = "xxx"
 )
 
 var UploadCmd = &cobra.Command{
