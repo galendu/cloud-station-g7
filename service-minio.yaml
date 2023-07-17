@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"creationTimestamp":"2023-07-15T07:22:34Z","managedFields":[{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}}},"f:spec":{"f:externalTrafficPolicy":{},"f:internalTrafficPolicy":{},"f:ports":{".":{},"k:{\"port\":9090,\"protocol\":\"TCP\"}":{".":{},"f:port":{},"f:protocol":{},"f:targetPort":{}}},"f:selector":{},"f:sessionAffinity":{},"f:type":{}}},"manager":"kubectl.exe","operation":"Update","time":"2023-07-15T07:28:06Z"}],"name":"minio","namespace":"minio-dev","resourceVersion":"322967","uid":"6119a5cd-a35d-4195-b92f-8f797e2f634b"},"spec":{"clusterIP":"10.100.21.214","clusterIPs":["10.100.21.214"],"externalTrafficPolicy":"Cluster","internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"name":"http","nodePort":32098,"port":9090,"protocol":"TCP","targetPort":9090},{"name":"apiserver","nodePort":32099,"port":9000,"protocol":"TCP","targetPort":9000}],"selector":{"app":"minio"},"sessionAffinity":"None","type":"NodePort"},"status":{"loadBalancer":{}}}
+  creationTimestamp: "2023-07-15T07:22:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":9000,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:nodePort: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":9090,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl.exe
+    operation: Update
+    time: "2023-07-15T10:28:28Z"
+  name: minio
+  namespace: minio-dev
+  resourceVersion: "342500"
+  uid: 6119a5cd-a35d-4195-b92f-8f797e2f634b
+spec:
+  clusterIP: 10.100.21.214
+  clusterIPs:
+  - 10.100.21.214
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    nodePort: 32098
+    port: 9090
+    protocol: TCP
+    targetPort: 9090
+  - name: apiserver
+    nodePort: 32099
+    port: 32099
+    protocol: TCP
+    targetPort: 32099
+  selector:
+    app: minio
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

@@ -6,6 +6,7 @@ import (
 	"github.com/galendu/cloud-station-g7/store"
 	"github.com/galendu/cloud-station-g7/store/aliyun"
 	"github.com/galendu/cloud-station-g7/store/aws"
+	"github.com/galendu/cloud-station-g7/store/minio"
 	"github.com/galendu/cloud-station-g7/store/tx"
 	"github.com/spf13/cobra"
 )
@@ -42,6 +43,14 @@ var UploadCmd = &cobra.Command{
 			uploader = tx.NewTxOssStore()
 		case "aws":
 			uploader = aws.NewAwsOssStore()
+		case "minio":
+			minOpts := &minio.Options{
+				Endpoint:     OssEndpoint,
+				AccessKey:    accessKey,
+				AccessSecret: accessSecret,
+			}
+			uploader, err = minio.NewMinOssStore(minOpts)
+
 		default:
 			return fmt.Errorf("not support oss storage provider")
 		}
