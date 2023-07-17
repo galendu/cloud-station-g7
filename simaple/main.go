@@ -11,8 +11,8 @@ import (
 var (
 	//程序内置
 	endpoint     = "oss-cn-beijing.aliyuncs.com"
-	accessKey    = "LTAI5tFsmLipSyCrrcA8wkUv"
-	accessSecret = "fCLTJUZfa2CVVpXbrwmeSLVaC4i5rx"
+	accessKey    = "xx"
+	accessSecret = "xx"
 
 	// 默认配置
 	bucketName = "galendu"
